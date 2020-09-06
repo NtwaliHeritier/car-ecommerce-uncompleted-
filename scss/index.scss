@@ -1,0 +1,71 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: white;
+    &:hover {
+        text-decoration: none;
+        color: rgb(92, 89, 89);
+    }
+}
+
+$color-red: #d35266;
+
+@mixin tablet {
+    @media screen and (min-width: 768px) and  (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+
+//nav
+nav {
+    font-size: 20px;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    .right-nav {
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    @include tablet {
+        justify-content: space-around;
+        font-size: 16px;
+        }
+
+    @include phone {
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        .right-nav {
+            margin-top: 2%;
+            justify-content: center;
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+
+//section1
+.section1 {
+    background-color: $color-red;
+    form {
+        justify-content: center;
+    }
+}
