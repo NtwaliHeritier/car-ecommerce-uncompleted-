@@ -63,7 +63,7 @@ nav {
 
 
 //section1
-.section1 {
+.search {
     background-color: $color-red;
     form {
         justify-content: center;
@@ -74,6 +74,52 @@ nav {
             flex-direction: column;
             width: 70%;
             margin: auto;
+        }
+    }
+}
+
+//section2
+.display {
+    justify-content: space-between;
+    .right-display {
+        span {
+            background-color: $color-red;
+            border: 1px solid black;
+            &:nth-child(1) {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            &:nth-child(2) {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+    @include tablet {
+        flex-direction: column;
+        .right-display {
+            p {
+                &:nth-child(1) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @include phone {
+        flex-direction: column;
+        font-size: 14px;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .right-display {
+            p {
+                &:nth-child(1) {
+                    text-align: center;
+                }
+            }
         }
     }
 }
