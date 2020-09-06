@@ -36,7 +36,7 @@ nav .right-nav {
   nav {
     flex-direction: column;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
   }
   nav .right-nav {
     margin-top: 2%;
@@ -52,4 +52,11 @@ nav .right-nav {
 }
 .section1 form {
   justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .section1 form {
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+  }
 }
