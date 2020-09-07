@@ -64,6 +64,11 @@ nav .right-nav {
 .display {
   justify-content: space-between;
 }
+.display .right-display .font-weight-bold {
+  margin-top: 6%;
+  color: #d35266;
+  font-size: 18px;
+}
 .display .right-display span {
   background-color: #d35266;
   border: 1px solid black;
@@ -80,8 +85,10 @@ nav .right-nav {
   .display {
     flex-direction: column;
   }
-  .display .right-display p:nth-child(1) {
+  .display .right-display .right-display .font-weight-bold {
     text-align: center;
+    margin-top: 0%;
+    padding-top: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -93,7 +100,9 @@ nav .right-nav {
     width: 200px;
     height: 200px;
   }
-  .display .right-display p:nth-child(1) {
+  .display .right-display .font-weight-bold {
     text-align: center;
+    margin-top: 0%;
+    padding-top: 0;
   }
 }

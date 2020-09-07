@@ -82,6 +82,11 @@ nav {
 .display {
     justify-content: space-between;
     .right-display {
+        .font-weight-bold {
+            margin-top: 6%;
+            color: $color-red;
+            font-size: 18px;
+        }
         span {
             background-color: $color-red;
             border: 1px solid black;
@@ -99,10 +104,12 @@ nav {
     @include tablet {
         flex-direction: column;
         .right-display {
-            p {
-                &:nth-child(1) {
+            .right-display {
+                .font-weight-bold {
                     text-align: center;
-                }
+                    margin-top: 0%;
+                    padding-top: 0;
+                 }
             }
         }
     }
@@ -115,11 +122,11 @@ nav {
         }
 
         .right-display {
-            p {
-                &:nth-child(1) {
-                    text-align: center;
-                }
-            }
+            .font-weight-bold {
+                text-align: center;
+                margin-top: 0%;
+                padding-top: 0;
+             }
         }
     }
 }
