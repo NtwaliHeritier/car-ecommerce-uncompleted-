@@ -100,6 +100,15 @@ nav .right-nav {
 .content img {
   height: 40%;
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .content .card-deck {
+    display: flex;
+  }
+  .content .card-deck .card {
+    min-width: 40%;
+    margin-bottom: 2%;
+  }
+}
 @media screen and (max-width: 767px) {
   .content .card-deck {
     display: flex;

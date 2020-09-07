@@ -19,6 +19,12 @@ a {
 
 $color-red: #d35266;
 
+@mixin tablet {
+    @media screen and (max-width: 1023px) and (min-width: 768px) {
+        @content;
+    }
+}
+
 @mixin phone {
     @media screen and (max-width: 767px) {
         @content;
@@ -117,6 +123,16 @@ nav {
     margin: 2% auto;
     img {
         height: 40%;
+    }
+
+    @include tablet {
+        .card-deck {
+            display: flex;
+            .card {
+                min-width: 40%;
+                margin-bottom: 2%;
+            }
+        }
     }
 
     @include phone {
