@@ -106,3 +106,49 @@ nav .right-nav {
     padding-top: 0;
   }
 }
+
+.content .my-card {
+  justify-content: space-around;
+}
+.content .my-card .card-item {
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 20%;
+}
+.content .my-card img {
+  width: 100%;
+  height: 60%;
+}
+.content .my-card .card-specs {
+  justify-content: space-between;
+  align-items: center;
+}
+.content .my-card .card-specs .price span:nth-child(1) {
+  text-decoration: line-through;
+}
+.content .my-card .card-specs .price span:nth-child(2) {
+  color: #d35266;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .content .my-card {
+    flex-wrap: wrap;
+  }
+  .content .my-card .card-item {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .content h3 {
+    font-size: 18px;
+  }
+  .content h3 small {
+    font-size: 12px;
+  }
+  .content .my-card {
+    flex-wrap: wrap;
+  }
+  .content .my-card .card-item {
+    width: 100%;
+  }
+}

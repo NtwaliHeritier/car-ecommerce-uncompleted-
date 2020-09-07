@@ -130,3 +130,56 @@ nav {
         }
     }
 }
+
+.content {
+    .my-card {
+        justify-content: space-around;
+        .card-item {
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: space-between;
+            width: 20%;
+        }
+        img {
+            width: 100%;
+            height: 60%;
+        }
+        .card-specs {
+            justify-content: space-between;
+            align-items: center;
+            .price span {
+                &:nth-child(1) {
+                    text-decoration: line-through;
+                }
+
+                &:nth-child(2) {
+                    color: $color-red;
+                }
+            }
+        }
+    }
+
+    @include tablet {
+        .my-card {
+            flex-wrap: wrap;
+            .card-item {
+                width: 40%;
+            } 
+        }
+    }
+
+    @include phone {
+        h3 {
+            font-size: 18px;
+            small {
+                font-size: 12px;
+            }
+        }
+        .my-card {
+            flex-wrap: wrap;
+            .card-item {
+                width: 100%;
+            } 
+        }
+    }
+}
