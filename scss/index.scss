@@ -18,12 +18,6 @@ a {
 
 $color-red: #d35266;
 
-@mixin tablet {
-    @media screen and (min-width: 768px) and  (max-width: 1023px) {
-        @content;
-    }
-}
-
 @mixin phone {
     @media screen and (max-width: 767px) {
         @content;
@@ -33,7 +27,7 @@ $color-red: #d35266;
 
 //nav
 nav {
-    font-size: 20px;
+    font-size: 16px;
     justify-content: space-between;
     width: 90%;
     margin: auto;
@@ -41,11 +35,6 @@ nav {
         width: 80%;
         justify-content: space-between;
     }
-
-    @include tablet {
-        justify-content: space-around;
-        font-size: 16px;
-        }
 
     @include phone {
         flex-direction: column;
@@ -101,18 +90,7 @@ nav {
             }
         }
     }
-    @include tablet {
-        flex-direction: column;
-        .right-display {
-            .right-display {
-                .font-weight-bold {
-                    text-align: center;
-                    margin-top: 0%;
-                    padding-top: 0;
-                 }
-            }
-        }
-    }
+
     @include phone {
         flex-direction: column;
         font-size: 14px;
@@ -136,9 +114,9 @@ nav {
         justify-content: space-around;
         .card-item {
             flex-direction: column;
-            justify-content: space-between;
-            align-content: space-between;
+            justify-content: flex-start;
             width: 20%;
+            height: 60vh;
         }
         img {
             width: 100%;
@@ -156,15 +134,9 @@ nav {
                     color: $color-red;
                 }
             }
-        }
-    }
-
-    @include tablet {
-        .my-card {
-            flex-wrap: wrap;
-            .card-item {
-                width: 40%;
-            } 
+            @include phone {
+                justify-content: space-around;
+            }
         }
     }
 
@@ -179,6 +151,11 @@ nav {
             flex-wrap: wrap;
             .card-item {
                 width: 100%;
+                justify-content: center;
+                img {
+                    width: 60%;
+                    align-self: center;
+                }
             } 
         }
     }
