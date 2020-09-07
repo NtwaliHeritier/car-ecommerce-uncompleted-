@@ -6,6 +6,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #e9ecef;
 }
 
 a {
@@ -66,6 +67,7 @@ nav .right-nav {
 .display .right-display span {
   background-color: #d35266;
   border: 1px solid black;
+  cursor: pointer;
 }
 .display .right-display span:nth-child(1) {
   border-top-left-radius: 5px;
@@ -91,6 +93,10 @@ nav .right-nav {
   }
 }
 
+.content {
+  width: 95%;
+  margin: auto;
+}
 .content .my-card {
   justify-content: space-around;
 }
@@ -136,5 +142,47 @@ nav .right-nav {
   .content .my-card .card-item img {
     width: 60%;
     align-self: center;
+  }
+}
+
+footer {
+  font-size: 18px;
+  color: white;
+  padding-top: 3%;
+}
+footer .footer-top {
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+footer .footer-top .left-footer {
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  footer .footer-top {
+    flex-direction: column;
+  }
+  footer .footer-top a {
+    display: block;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  footer .footer-top h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 2%;
+  }
+  footer .footer-top p {
+    font-size: 16px;
+  }
+  footer .footer-top .left-footer, footer .footer-top .right-footer {
+    width: 100%;
+  }
+  footer .footer-top .right-footer .d-flex {
+    font-size: 18px;
+    justify-content: space-around;
+  }
+  footer .footer-below {
+    font-size: 16px;
   }
 }

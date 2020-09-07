@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9ecef;
 }
 
 a {
@@ -79,6 +80,7 @@ nav {
         span {
             background-color: $color-red;
             border: 1px solid black;
+            cursor: pointer;
             &:nth-child(1) {
                 border-top-left-radius: 5px;
                 border-bottom-left-radius: 5px;
@@ -110,6 +112,8 @@ nav {
 }
 
 .content {
+    width: 95%;
+    margin: auto;
     .my-card {
         justify-content: space-around;
         .card-item {
@@ -157,6 +161,55 @@ nav {
                     align-self: center;
                 }
             } 
+        }
+    }
+}
+
+footer {  
+    font-size: 18px;
+    color: white;
+    padding-top: 3%;
+    
+    .footer-top {
+        width: 95%;
+        margin: 0 auto;
+        justify-content: space-around;
+        .left-footer {
+            width: 50%;
+        }
+    }
+
+    @include phone {
+        .footer-top {
+            flex-direction: column;
+            a {
+                display: block;
+                text-align: center;
+                margin-bottom: 2%;
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 18px;
+                margin-top: 2%;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .left-footer, .right-footer {
+                width: 100%;
+            }
+
+            .right-footer .d-flex {
+                font-size: 18px;
+                justify-content: space-around;
+            }
+        }
+
+        .footer-below {
+            font-size: 16px;
         }
     }
 }
