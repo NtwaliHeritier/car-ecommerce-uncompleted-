@@ -104,7 +104,7 @@ nav .right-nav {
   flex-direction: column;
   justify-content: flex-start;
   width: 20%;
-  height: 60vh;
+  height: 80vh;
 }
 .content .my-card img {
   width: 100%;
@@ -141,6 +141,8 @@ nav .right-nav {
   }
   .content .my-card .card-item img {
     width: 60%;
+    object-fit: contain;
+    object-position: center;
     align-self: center;
   }
 }

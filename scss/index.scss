@@ -120,7 +120,7 @@ nav {
             flex-direction: column;
             justify-content: flex-start;
             width: 20%;
-            height: 60vh;
+            height: 80vh;
         }
         img {
             width: 100%;
@@ -158,6 +158,8 @@ nav {
                 justify-content: center;
                 img {
                     width: 60%;
+                    object-fit: contain;
+                    object-position: center;
                     align-self: center;
                 }
             } 
